@@ -9,6 +9,7 @@ export default function MagneticButton({
   href,
   onClick,
   as = "a",
+  type,
   strength = 0.35,
 }: {
   children: ReactNode;
@@ -16,6 +17,7 @@ export default function MagneticButton({
   href?: string;
   onClick?: () => void;
   as?: "a" | "button";
+  type?: "button" | "submit";
   strength?: number;
 }) {
   const ref = useRef<HTMLAnchorElement & HTMLButtonElement>(null);
@@ -39,6 +41,7 @@ export default function MagneticButton({
       ref={ref as never}
       href={href}
       onClick={onClick}
+      type={as === "button" ? (type ?? "button") : undefined}
       data-cursor-hover
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

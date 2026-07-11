@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { business, pricing } from "@/content";
 import Reveal from "./Reveal";
 import PricingTimeline from "./PricingTimeline";
+import MagneticButton from "./MagneticButton";
 
 export default function Pricing() {
   return (
@@ -54,6 +55,20 @@ export default function Pricing() {
                 <p className="mt-5 flex-1 text-sm font-semibold leading-relaxed text-paper/70">
                   {tier.note}
                 </p>
+                <form action="/api/checkout" method="POST" className="mt-6">
+                  <input type="hidden" name="tierId" value={tier.id} />
+                  <MagneticButton
+                    as="button"
+                    type="submit"
+                    className={`inline-flex w-full items-center justify-center px-5 py-3 text-xs font-bold uppercase tracking-wide transition-all duration-300 sm:text-sm ${
+                      tier.featured
+                        ? "bg-yellow text-ink hover:shadow-[0_0_30px_rgba(255,212,0,0.55)]"
+                        : "border-2 border-yellow/60 text-paper hover:border-yellow hover:bg-yellow hover:text-ink"
+                    }`}
+                  >
+                    {tier.checkout.payLabel}
+                  </MagneticButton>
+                </form>
               </motion.div>
             </Reveal>
           ))}

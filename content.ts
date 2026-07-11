@@ -147,32 +147,56 @@ export const pricing = {
   timeline: ["0:15", "1:00", "2:00", "3:00", "3:30"],
   tiers: [
     {
+      id: "first-video",
       label: "First Video",
       range: "Any length",
       price: "$50",
       note: "Flat rate, one time — a way to show the work before committing to more.",
       featured: true,
+      checkout: {
+        amountCents: 5000,
+        payLabel: "Pay $50 now",
+        description: "First video, any length — flat rate, paid in full.",
+      },
     },
     {
+      id: "quick-hook",
       label: "Quick Hook",
       range: "0:15 – 0:45",
       price: "$100–$200",
       note: "Quick hooks and teasers, social-first cuts.",
       featured: false,
+      checkout: {
+        amountCents: 10000,
+        payLabel: "Pay $100 deposit",
+        description: "Quick Hook deposit — remaining balance invoiced once scope is confirmed.",
+      },
     },
     {
+      id: "full-story",
       label: "Full Story",
       range: "0:45 – 2:00",
       price: "$200–$350",
       note: "Room for a full story, product walkthrough, or hiring spot.",
       featured: false,
+      checkout: {
+        amountCents: 20000,
+        payLabel: "Pay $200 deposit",
+        description: "Full Story deposit — remaining balance invoiced once scope is confirmed.",
+      },
     },
     {
+      id: "full-promo",
       label: "Full Promo",
       range: "2:00 – 3:30",
       price: "$350–$500",
       note: "Full-length promo pieces, more scenes, more polish.",
       featured: false,
+      checkout: {
+        amountCents: 35000,
+        payLabel: "Pay $350 deposit",
+        description: "Full Promo deposit — remaining balance invoiced once scope is confirmed.",
+      },
     },
   ],
   bundle: {

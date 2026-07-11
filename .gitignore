@@ -32,12 +32,21 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
+
+# stripe
+stripe_backup_code.txt
 
 # vercel
 .vercel
 
 # claude code local settings
 .claude/settings.local.json
+
+# locally installed agent skills (fetched via `npx skills`)
+.agents/
+.claude/skills/
+skills-lock.json
 
 # typescript
 *.tsbuildinfo
