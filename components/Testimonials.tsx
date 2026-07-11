@@ -31,7 +31,7 @@ export default function Testimonials() {
       </div>
 
       <Reveal delay={0.1} className="mt-14">
-        <Marquee tone="blue" items={testimonials.tickerItems} />
+        <Marquee tone="secondary" items={testimonials.tickerItems} />
       </Reveal>
 
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10">
@@ -46,7 +46,7 @@ export default function Testimonials() {
               &ldquo;{current.quote}&rdquo;
             </p>
             <footer className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-paper/60">
-              {current.name} <span className="text-blue">— {current.role}</span>
+              {current.name} <span className="text-yellow">— {current.role}</span>
             </footer>
           </motion.blockquote>
         </div>
@@ -60,7 +60,7 @@ export default function Testimonials() {
               aria-label={`Show testimonial from ${quote.name}`}
               aria-current={i === active}
               className={`h-2 w-8 transition-colors duration-300 ${
-                i === active ? "bg-red" : "bg-paper/25 hover:bg-paper/50"
+                i === active ? "bg-yellow" : "bg-paper/25 hover:bg-paper/50"
               }`}
             />
           ))}

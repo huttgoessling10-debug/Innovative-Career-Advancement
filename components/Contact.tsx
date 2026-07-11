@@ -23,7 +23,7 @@ export default function Contact() {
           <div className="mt-12 flex flex-col items-start gap-8 sm:flex-row sm:items-center sm:gap-10">
             <MagneticButton
               href={`mailto:${business.email}?subject=${encodeURIComponent(contact.subject)}`}
-              className="inline-flex items-center justify-center bg-red px-9 py-5 text-sm font-bold uppercase tracking-wide text-paper transition-all duration-300 hover:shadow-[0_0_40px_rgba(30,58,240,0.55)]"
+              className="inline-flex items-center justify-center bg-yellow px-9 py-5 text-sm font-bold uppercase tracking-wide text-ink transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,212,0,0.55)]"
             >
               {contact.ctaLabel}
             </MagneticButton>
@@ -31,7 +31,7 @@ export default function Contact() {
             <a
               href={`mailto:${business.email}`}
               data-cursor-hover
-              className="text-lg font-bold text-blue underline decoration-2 underline-offset-8 transition-colors hover:text-red sm:text-xl"
+              className="text-lg font-bold text-yellow underline decoration-2 underline-offset-8 transition-colors hover:text-paper sm:text-xl"
             >
               {business.email}
             </a>
@@ -39,7 +39,7 @@ export default function Contact() {
         </Reveal>
       </div>
 
-      <Marquee tone="blue" />
+      <Marquee tone="secondary" />
     </section>
   );
 }

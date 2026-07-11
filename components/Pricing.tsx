@@ -16,8 +16,8 @@ export default function Pricing() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-8 inline-flex items-center gap-3 border-2 border-red px-5 py-3">
-            <span className="h-2 w-2 shrink-0 rounded-full bg-red" />
+          <div className="mt-8 inline-flex items-center gap-3 border-2 border-yellow px-5 py-3">
+            <span className="h-2 w-2 shrink-0 rounded-full bg-yellow" />
             <span className="text-sm font-bold uppercase tracking-wide sm:text-base">
               {pricing.badge}
             </span>
@@ -36,13 +36,13 @@ export default function Pricing() {
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
                 className={`flex h-full flex-col border-2 p-7 transition-shadow duration-300 ${
                   tier.featured
-                    ? "border-red shadow-[0_0_35px_rgba(232,39,42,0.35)] hover:shadow-[0_0_55px_rgba(232,39,42,0.55)]"
-                    : "border-paper/25 hover:border-blue hover:shadow-[0_0_35px_rgba(30,58,240,0.35)]"
+                    ? "border-yellow shadow-[0_0_35px_rgba(255,212,0,0.35)] hover:shadow-[0_0_55px_rgba(255,212,0,0.55)]"
+                    : "border-paper/25 hover:border-yellow hover:shadow-[0_0_35px_rgba(255,212,0,0.25)]"
                 }`}
               >
                 <span
                   className={`text-xs font-bold uppercase tracking-[0.2em] ${
-                    tier.featured ? "text-red" : "text-blue"
+                    tier.featured ? "text-yellow" : "text-yellow/70"
                   }`}
                 >
                   {tier.label}
@@ -70,7 +70,7 @@ export default function Pricing() {
             <a
               href={`mailto:${business.email}?subject=${encodeURIComponent("Bundle pricing inquiry")}`}
               data-cursor-hover
-              className="mt-6 inline-block text-sm font-bold uppercase tracking-wide text-blue underline decoration-2 underline-offset-8 transition-colors hover:text-red"
+              className="mt-6 inline-block text-sm font-bold uppercase tracking-wide text-yellow underline decoration-2 underline-offset-8 transition-colors hover:text-paper"
             >
               Ask about bundle pricing →
             </a>

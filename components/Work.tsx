@@ -27,7 +27,7 @@ export default function Work() {
               title={project.title}
               category={project.category}
               duration={project.duration}
-              tone={project.tone as "red" | "blue"}
+              tone={project.tone as "primary" | "secondary"}
             />
           ))}
           <div className="shrink-0 sm:w-4" aria-hidden="true" />

@@ -3,14 +3,14 @@ import { marqueeItems as defaultMarqueeItems } from "@/content";
 const SEPARATOR = "—";
 
 export default function Marquee({
-  tone = "red",
+  tone = "primary",
   items: itemsProp,
 }: {
-  tone?: "red" | "blue";
+  tone?: "primary" | "secondary";
   items?: string[];
 }) {
   const items = [...(itemsProp ?? defaultMarqueeItems), ...(itemsProp ?? defaultMarqueeItems)];
-  const colorClass = tone === "red" ? "text-red" : "text-blue";
+  const colorClass = tone === "primary" ? "text-yellow" : "text-yellow/60";
 
   return (
     <div className="w-full overflow-hidden border-y-2 border-paper/20 bg-ink py-4 sm:py-5">
