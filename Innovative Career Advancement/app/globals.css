@@ -3,13 +3,13 @@
 :root {
   --color-ink: #0a0a0b;
   --color-paper: #fafafa;
-  --color-yellow: #ffd400;
+  --color-red: #ff1e3c;
 }
 
 @theme inline {
   --color-ink: var(--color-ink);
   --color-paper: var(--color-paper);
-  --color-yellow: var(--color-yellow);
+  --color-red: var(--color-red);
   --font-display: var(--font-poppins);
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-yellow);
+  background: var(--color-red);
   color: var(--color-ink);
 }
 
@@ -75,7 +75,7 @@ body {
 .cursor-dot.cursor-hover {
   width: 56px;
   height: 56px;
-  background: var(--color-yellow);
+  background: var(--color-red);
 }
 
 @media (prefers-reduced-motion: reduce) {

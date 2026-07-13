@@ -17,8 +17,8 @@ export default function Pricing() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-8 inline-flex items-center gap-3 border-2 border-yellow px-5 py-3">
-            <span className="h-2 w-2 shrink-0 rounded-full bg-yellow" />
+          <div className="mt-8 inline-flex items-center gap-3 border-2 border-red px-5 py-3">
+            <span className="h-2 w-2 shrink-0 rounded-full bg-red" />
             <span className="text-sm font-bold uppercase tracking-wide sm:text-base">
               {pricing.badge}
             </span>
@@ -37,13 +37,13 @@ export default function Pricing() {
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
                 className={`flex h-full flex-col border-2 p-7 transition-shadow duration-300 ${
                   tier.featured
-                    ? "border-yellow shadow-[0_0_35px_rgba(255,212,0,0.35)] hover:shadow-[0_0_55px_rgba(255,212,0,0.55)]"
-                    : "border-paper/25 hover:border-yellow hover:shadow-[0_0_35px_rgba(255,212,0,0.25)]"
+                    ? "border-red shadow-[0_0_35px_rgba(255,30,60,0.35)] hover:shadow-[0_0_55px_rgba(255,30,60,0.55)]"
+                    : "border-paper/25 hover:border-red hover:shadow-[0_0_35px_rgba(255,30,60,0.25)]"
                 }`}
               >
                 <span
                   className={`text-xs font-bold uppercase tracking-[0.2em] ${
-                    tier.featured ? "text-yellow" : "text-yellow/70"
+                    tier.featured ? "text-red" : "text-red/70"
                   }`}
                 >
                   {tier.label}
@@ -62,8 +62,8 @@ export default function Pricing() {
                     type="submit"
                     className={`inline-flex w-full items-center justify-center px-5 py-3 text-xs font-bold uppercase tracking-wide transition-all duration-300 sm:text-sm ${
                       tier.featured
-                        ? "bg-yellow text-ink hover:shadow-[0_0_30px_rgba(255,212,0,0.55)]"
-                        : "border-2 border-yellow/60 text-paper hover:border-yellow hover:bg-yellow hover:text-ink"
+                        ? "bg-red text-ink hover:shadow-[0_0_30px_rgba(255,30,60,0.55)]"
+                        : "border-2 border-red/60 text-paper hover:border-red hover:bg-red hover:text-ink"
                     }`}
                   >
                     {tier.checkout.payLabel}
@@ -85,7 +85,7 @@ export default function Pricing() {
             <a
               href={`mailto:${business.email}?subject=${encodeURIComponent("Bundle pricing inquiry")}`}
               data-cursor-hover
-              className="mt-6 inline-block text-sm font-bold uppercase tracking-wide text-yellow underline decoration-2 underline-offset-8 transition-colors hover:text-paper"
+              className="mt-6 inline-block text-sm font-bold uppercase tracking-wide text-red underline decoration-2 underline-offset-8 transition-colors hover:text-paper"
             >
               Ask about bundle pricing →
             </a>

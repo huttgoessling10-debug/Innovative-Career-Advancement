@@ -24,8 +24,8 @@ export default function WhatWeMake() {
 
           <div className="lg:col-span-5 lg:col-start-9 xl:col-span-4 xl:col-start-9">
             <Reveal delay={0.2}>
-              <div className="border-2 border-yellow p-8 sm:p-10">
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-yellow">
+              <div className="border-2 border-red p-8 sm:p-10">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-red">
                   {whatWeMake.callout.title}
                 </p>
                 <p className="mt-5 text-lg font-semibold leading-relaxed text-paper/90">
