@@ -46,7 +46,7 @@ export default function Testimonials() {
               &ldquo;{current.quote}&rdquo;
             </p>
             <footer className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-paper/60">
-              {current.name} <span className="text-red">— {current.role}</span>
+              {current.name} <span className="text-gold">— {current.role}</span>
             </footer>
           </motion.blockquote>
         </div>
@@ -60,7 +60,7 @@ export default function Testimonials() {
               aria-label={`Show testimonial from ${quote.name}`}
               aria-current={i === active}
               className={`h-2 w-8 transition-colors duration-300 ${
-                i === active ? "bg-red" : "bg-paper/25 hover:bg-paper/50"
+                i === active ? "bg-gold" : "bg-paper/25 hover:bg-paper/50"
               }`}
             />
           ))}

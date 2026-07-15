@@ -8,7 +8,7 @@ export default function PricingTimeline() {
     <div className="mt-4">
       <div className="relative h-3 w-full overflow-hidden border border-paper/25 bg-paper/10">
         <motion.div
-          className="h-full bg-gradient-to-r from-red to-red/30"
+          className="h-full bg-gradient-to-r from-gold to-gold/30"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, margin: "-80px" }}

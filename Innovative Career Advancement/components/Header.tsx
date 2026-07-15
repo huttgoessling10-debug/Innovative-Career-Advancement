@@ -37,7 +37,7 @@ export default function Header() {
 
         <MagneticButton
           href={`mailto:${business.email}?subject=${encodeURIComponent("General inquiry")}`}
-          className="inline-flex items-center border-2 border-red bg-transparent px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-paper transition-colors duration-300 hover:bg-red hover:border-red hover:text-ink sm:px-6 sm:py-3 sm:text-sm"
+          className="inline-flex items-center border-2 border-gold bg-transparent px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-paper transition-colors duration-300 hover:bg-gold hover:border-gold hover:text-ink sm:px-6 sm:py-3 sm:text-sm"
         >
           Contact
         </MagneticButton>
