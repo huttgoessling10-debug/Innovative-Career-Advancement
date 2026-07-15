@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Animated background blobs */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <motion.div
-          className="absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-yellow/30 blur-[120px]"
+          className="absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-gold/30 blur-[120px]"
           animate={
             reduceMotion
               ? {}
@@ -44,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -right-32 top-1/3 h-[480px] w-[480px] rounded-full bg-yellow/15 blur-[130px]"
+          className="absolute -right-32 top-1/3 h-[480px] w-[480px] rounded-full bg-gold/15 blur-[130px]"
           animate={
             reduceMotion
               ? {}
@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xs font-bold uppercase tracking-[0.25em] text-yellow sm:text-sm"
+          className="text-xs font-bold uppercase tracking-[0.25em] text-gold sm:text-sm"
         >
           {hero.eyebrow}
         </motion.p>
@@ -75,7 +75,7 @@ export default function Hero() {
               <span key={i} className="inline-block overflow-hidden align-bottom">
                 <motion.span
                   variants={wordVariant}
-                  className="mr-[0.25em] inline-block bg-gradient-to-r from-yellow to-yellow/50 bg-clip-text text-transparent"
+                  className="mr-[0.25em] inline-block bg-gradient-to-r from-gold to-gold/50 bg-clip-text text-transparent"
                 >
                   {hero.headlineEmphasis}
                 </motion.span>
@@ -108,7 +108,7 @@ export default function Hero() {
           >
             <MagneticButton
               href={`mailto:${business.email}?subject=${encodeURIComponent(hero.ctaPrimary.subject)}`}
-              className="inline-flex items-center justify-center bg-yellow px-7 py-4 text-sm font-bold uppercase tracking-wide text-ink shadow-[0_0_0_rgba(255,212,0,0)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,212,0,0.55)] sm:px-9 sm:py-5"
+              className="inline-flex items-center justify-center bg-gold px-7 py-4 text-sm font-bold uppercase tracking-wide text-ink shadow-[0_0_0_rgba(212,175,55,0)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,175,55,0.55)] sm:px-9 sm:py-5"
             >
               {hero.ctaPrimary.label}
             </MagneticButton>
@@ -116,7 +116,7 @@ export default function Hero() {
             <a
               href={hero.ctaSecondary.href}
               data-cursor-hover
-              className="text-sm font-bold uppercase tracking-wide text-paper underline decoration-yellow decoration-2 underline-offset-8 transition-colors hover:text-yellow"
+              className="text-sm font-bold uppercase tracking-wide text-paper underline decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-gold"
             >
               {hero.ctaSecondary.label}
             </a>

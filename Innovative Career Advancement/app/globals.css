@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --color-ink: #0a0a0b;
+  --color-ink: #0a1930;
   --color-paper: #fafafa;
-  --color-yellow: #ffd400;
+  --color-gold: #d4af37;
 }
 
 @theme inline {
   --color-ink: var(--color-ink);
   --color-paper: var(--color-paper);
-  --color-yellow: var(--color-yellow);
+  --color-gold: var(--color-gold);
   --font-display: var(--font-poppins);
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-yellow);
+  background: var(--color-gold);
   color: var(--color-ink);
 }
 
@@ -75,7 +75,7 @@ body {
 .cursor-dot.cursor-hover {
   width: 56px;
   height: 56px;
-  background: var(--color-yellow);
+  background: var(--color-gold);
 }
 
 @media (prefers-reduced-motion: reduce) {

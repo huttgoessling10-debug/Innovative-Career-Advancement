@@ -15,8 +15,8 @@ export default function VideoCard({
   tone?: "primary" | "secondary";
 }) {
   const [hovered, setHovered] = useState(false);
-  const glow = tone === "primary" ? "shadow-[0_0_50px_rgba(255,212,0,0.4)]" : "shadow-[0_0_50px_rgba(255,212,0,0.22)]";
-  const ring = "group-hover:border-yellow";
+  const glow = tone === "primary" ? "shadow-[0_0_50px_rgba(212,175,55,0.4)]" : "shadow-[0_0_50px_rgba(212,175,55,0.22)]";
+  const ring = "group-hover:border-gold";
 
   return (
     <div
@@ -27,7 +27,7 @@ export default function VideoCard({
     >
       <motion.div
         className={`absolute inset-0 bg-gradient-to-br ${
-          tone === "primary" ? "from-yellow/70 via-ink to-yellow/10" : "from-yellow/35 via-ink to-yellow/10"
+          tone === "primary" ? "from-gold/70 via-ink to-gold/10" : "from-gold/35 via-ink to-gold/10"
         }`}
         animate={hovered ? { scale: 1.12 } : { scale: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -48,7 +48,7 @@ export default function VideoCard({
       </motion.div>
 
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/70 to-transparent p-5 pt-14">
-        <span className={`text-xs font-bold uppercase tracking-[0.2em] ${tone === "primary" ? "text-yellow" : "text-yellow/70"}`}>
+        <span className={`text-xs font-bold uppercase tracking-[0.2em] ${tone === "primary" ? "text-gold" : "text-gold/70"}`}>
           {category}
         </span>
         <h3 className="mt-2 text-xl font-extrabold uppercase leading-tight sm:text-2xl">{title}</h3>

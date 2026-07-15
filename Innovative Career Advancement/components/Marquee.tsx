@@ -10,7 +10,7 @@ export default function Marquee({
   items?: string[];
 }) {
   const items = [...(itemsProp ?? defaultMarqueeItems), ...(itemsProp ?? defaultMarqueeItems)];
-  const colorClass = tone === "primary" ? "text-yellow" : "text-yellow/60";
+  const colorClass = tone === "primary" ? "text-gold" : "text-gold/60";
 
   return (
     <div className="w-full overflow-hidden border-y-2 border-paper/20 bg-ink py-4 sm:py-5">
